@@ -1,139 +1,126 @@
-# MTL-XF-028 — Required deliverables
+# MTL-XF-028 — Required deliverables and metric contracts
 
-**Commissioned decision:** Which local-authority and sector combinations warrant decarbonisation programme investigation based on emissions scale, trend and realistic local influence?
+**Decision:** Which local-authority and sector combinations warrant decarbonisation programme investigation based on emissions scale, trend and realistic local influence?  
+**Business acceptance:** Director of Net Zero & Climate Programme Investment  
+**Core scope:** Agreed DESNZ workbook, 2005–2024. Default screening covers English LA/sector records; recent comparison uses 2019–2024, with 2005 as the long-run reference where a valid positive baseline exists. Use a single inventory revision and boundary basis. Territorial total greenhouse gases remain separate from any narrower local-influence measure. Present at most ten shortlisted LA/sector cases for feasibility investigation.
 
-All locations below refer to the team's delivery repository. The master repository defines the requirements and contains no completed analysis. Owners are assigned from [the project roles](PROJECT_BRIEF.md).
+All artefact locations refer to the team repository. Deliver the core before optional extensions. [The source register](../data/SOURCE_REGISTER.md) documents evidence status; required field support is a G1 release condition.
 
-## D1 — Discovery & decision requirements
+## D1 — Discovery & requirements
 
-**Due:** Week 1  
-**Team artefact location:** `docs/01-discovery/`
+**Due:** Week 1 · **Location:** `docs/01-discovery/` · **Owner:** Business Analyst
 
-Decision statement; stakeholder map; as-is reporting to investigation-review process; at least eight prioritised requirements. Answer these questions: Which LA/sector combinations account for the greatest emissions burden? Where are comparable emissions falling slowly or increasing? How does the picture change between territorial and locally influenceable scopes? Are changes driven by sector mix or shifts within sectors? Which additional cost, feasibility and delivery evidence is required for programme investment?
+Map the annual emissions baseline review and quarterly programme-prioritisation meeting, stakeholder needs, current reporting failures and target decision. Eight prioritised requirements must cover the business questions, scope gates and usable outputs.
 
-**Acceptance evidence:** All requirements have an owner, priority, deliverable and test ID; domain analyst approves scope.
+**Pass evidence:** Each requirement has an accountable user, artefact, test and acceptance owner.
 
-## D2 — Governed sources & cohort
+## D2 — Sources, governance & cohort contract
 
-**Due:** Week 2  
-**Team artefact location:** `docs/02-data-governance/; data/`
+**Due:** Week 2 · **Location:** `data/; docs/02-data-governance/` · **Owner:** Data Governance Analyst
 
-Freeze the agreed DESNZ 2005–2024 local-authority greenhouse-gas XLSX, approximately 24.9 MB in the prior agreement. Use this workbook rather than the 82.6 MB CSV. Record sheets, units, gases, revisions and territorial/within-influence definitions from actual metadata. Default analysis covers English local authorities; retain other UK areas separately for context. Register exact files, metadata, licences, checksums, coverage and critical fields; record rejection of unavailable dimensions.
+Complete the source-to-deliverable support matrix and classify core, fallback and optional inputs. Agreed DESNZ workbook, 2005–2024. Default screening covers English LA/sector records; recent comparison uses 2019–2024, with 2005 as the long-run reference where a valid positive baseline exists. Use a single inventory revision and boundary basis. Territorial total greenhouse gases remain separate from any narrower local-influence measure. Present at most ten shortlisted LA/sector cases for feasibility investigation.
 
-**Acceptance evidence:** 100% of inputs registered; no claimed freeze until acquisition evidence exists.
+**Pass evidence:** Every used input has provenance, exact version/coverage, licence evidence and SHA-256; conditional scope cannot be signed off without supporting fields.
 
-## D3 — Reproducible analytical model
+## D3 — Reproducible model & ingestion
 
-**Due:** Week 3  
-**Team artefact location:** `src/; sql/; docs/03-data-model/`
+**Due:** Week 3 · **Location:** `src/; sql/; docs/03-data-model/` · **Owner:** Data Engineer
 
-Year × local-authority code × sector/subsector × gas/CO2e basis × territorial or within-influence scope. Keep source totals and subsector details at separate hierarchy levels. Deliver load, type checks, hierarchy handling, lineage, exclusions and environment instructions.
+Implement raw preservation, selection, schema checks, curated facts and dimensions. Year × local-authority code × sector/subsector × gas/CO2e basis × territorial or within-influence scope. Keep source totals and subsector details at separate hierarchy levels.
 
-**Acceptance evidence:** A second member regenerates equivalent curated outputs from identical inputs; no unexplained duplicate analytical keys.
+**Pass evidence:** Zero unexplained duplicate keys or join inflation; every input row accounted for as retained/excluded/quarantined.
 
-## D4 — Quality & reconciliation
+## D4 — Quality, source reconciliation & exceptions
 
-**Due:** Week 3  
-**Team artefact location:** `docs/04-data-quality/; tests/`
+**Due:** Week 3 · **Location:** `tests/; docs/04-data-quality/` · **Owner:** Independent reviewer + domain specialist
 
-Profile missingness, suppression, valid values, keys and join coverage. Reconcile five LA/year/sector figures and one authority total bridge. Verify tonnes versus kilotonnes conversion with a worked example. Test nonpositive baselines and a boundary-change exclusion. Show shortlist sensitivity to two weight sets and distinguish territorial from influenceable scope.
+Execute source, denominator, missingness, boundary and linkage checks against the risk 'Local influence, inventory revisions and gas/unit differences can create misleading decarbonisation priorities.'
 
-**Acceptance evidence:** Every input row is accounted for as retained, excluded or quarantined; five published cells reconcile within declared rounding.
+**Pass evidence:** Reconcile five source values from at least two periods or segments; retain source coordinates, precision and explanations for non-additive totals.
 
-## D5 — KPI catalogue
+## D5 — Governed metric catalogue
 
-**Due:** Week 4  
-**Team artefact location:** `docs/05-kpi-catalogue/`
+**Due:** Week 4 · **Location:** `docs/05-kpi-catalogue/` · **Owner:** Domain specialist + Data Governance Analyst
 
-Define all 8 measures listed below with formula, grain, denominator, unit, source fields, exclusions, owner, refresh and limitations.
+Implement the 8 metric contracts below; distinguish unconditional core metrics from gated extensions.
 
-**Acceptance evidence:** 100% headline metrics trace to source fields and tested transformations; conditional unavailable measures are explicitly marked.
+**Pass evidence:** Each core metric has purpose, raw fields, formula, grain, denominator/unit, missing/zero handling, owner, refresh and test; conditional items have explicit eligibility or unavailable status.
 
-## D6 — Domain analytical assessment
+## D6 — Domain assessment
 
-**Due:** Week 5  
-**Team artefact location:** `analysis/; docs/06-analysis/`
+**Due:** Week 5 · **Location:** `analysis/; docs/06-analysis/` · **Owner:** Domain analyst
 
 Build territorial emissions trend and sector contribution bridges, reconciling totals at declared hierarchy. Compare 2005 baseline and recent five-year patterns; isolate boundary changes and negative/net emission categories.
 
-**Acceptance evidence:** At least five evidence-backed findings state period, population, comparison, magnitude, uncertainty and limitation; negative findings count.
+**Pass evidence:** At least five supported findings answer the five questions or document a genuine evidence gap; each includes magnitude, scope, comparison and limitation.
 
-## D7 — Investigation decision framework
+## D7 — Investigation framework & scenarios
 
-**Due:** Week 6  
-**Team artefact location:** `docs/07-decision-framework/`
+**Due:** Week 6 · **Location:** `docs/07-decision-framework/` · **Owner:** Director of Net Zero & Climate Programme Investment (business acceptance)
 
-Prioritise up to ten LA/sector investigation cases using burden, trend and a documented local-influence assessment; test at least two weight sets. Record eligibility, thresholds, weights if used, reason codes and manual review triggers.
+Provide transparent component ranks for current burden, recent reduction trend and documented local influence. Compare a burden-led weight set (60/20/20) with a more balanced set (40/30/30). Define component direction, eligibility and missingness before applying weights; do not score a missing influence assessment as zero. Weights are simulated planning assumptions.
 
-**Acceptance evidence:** Every shortlisted case has metrics, rationale, owner and evidence gaps; at least two scenarios compared; fewer than ten is valid where evidence is insufficient.
+**Pass evidence:** Publish eligibility, component definitions, scenario differences and up to ten supported cases; every case names a service role, evidence request and review trigger.
 
-## D8 — BI decision-support product
+## D8 — Decision-support BI
 
-**Due:** Draft Week 6; final Week 7  
-**Team artefact location:** `dashboard/`
+**Due:** Draft Week 6; final Week 7 · **Location:** `dashboard/` · **Owner:** BI Developer
 
-Executive overview answering 'Which local-authority and sector combinations warrant decarbonisation programme investigation based on emissions scale, trend and realistic local influence?' plus diagnostic and data-quality views; visible periods, units, denominator notes, resettable filters and accessible labels.
+Build overview, diagnostic and quality pages for the annual emissions baseline review and quarterly programme-prioritisation meeting. Show period, units, definitions, missingness and core/extension status.
 
-**Acceptance evidence:** Five headline measures reconcile; every filter tested; export screenshots/PDF plus reproducible build or free access instructions.
+**Pass evidence:** Five headline values reconcile; every visible filter and reset tested; accessible static export plus free review/build path.
 
-## D9 — Independent assurance & UAT
+## D9 — Assurance & simulated UAT
 
-**Due:** Week 7  
-**Team artefact location:** `docs/08-assurance-uat/`
+**Due:** Week 7 · **Location:** `docs/08-assurance-uat/` · **Owner:** Independent reviewer
 
-At least ten scenarios including the four project-specific tests below; requirement-to-test matrix, expected/actual evidence, defect log and simulated stakeholder feedback.
+Execute DT1–DT10 below, plus any tool-specific calculations and filter tests. Record expected/actual evidence, requirement links and defects.
 
-**Acceptance evidence:** No unresolved critical/high defect; accepted lower-severity limitations have a named reviewer and explicit impact.
+**Pass evidence:** All ten mandatory domain cases evidenced; no critical/high issue remains; accepted lower-impact limitations have named review.
 
 ## D10 — Technical & operational handover
 
-**Due:** Week 8  
-**Team artefact location:** `docs/09-technical-handover/`
+**Due:** Week 8 · **Location:** `docs/09-technical-handover/` · **Owner:** Data Engineer + a second-member reviewer
 
-Clean setup, architecture, frozen input manifest, run/refresh steps, output checks, troubleshooting and change-control process for Local Net Zero Emissions, Sector Decarbonisation & Intervention Prioritisation Intelligence.
+Provide environment, immutable manifest, end-to-end run, output checks, troubleshooting and refresh/change process.
 
-**Acceptance evidence:** Another member reproduces the core outputs without undocumented edits and records environment, duration and discrepancies.
+**Pass evidence:** A second member regenerates equivalent core outputs without undocumented edits and records checks, environment, duration and result.
 
-## D11 — Executive recommendation
+## D11 — Executive briefing & presentation
 
-**Due:** Week 8  
-**Team artefact location:** `deliverables/`
+**Due:** Week 8 · **Location:** `deliverables/` · **Owner:** Business Analyst + specialist service roles
 
-Maximum two-page briefing and 15–20 minute presentation: commissioned decision, five findings, investigation shortlist, sensitivity, missing evidence, responsibilities and next review.
+Deliver maximum two-page briefing and 15–20 minute presentation to Director of Net Zero & Climate Programme Investment: decision, five findings, scenario comparison, investigation actions, evidence gaps and next review.
 
-**Acceptance evidence:** Every quantitative claim links to an artefact/metric; no unsupported causal, policy or operational guarantee.
+**Pass evidence:** Every numeric claim links to tested evidence; explicitly show a case where action is not yet supported.
 
 ## D12 — Contribution & delivery record
 
-**Due:** Weekly; final Week 8  
-**Team artefact location:** `CONTRIBUTIONS.md; delivery issues/PRs`
+**Due:** Weekly; final Week 8 · **Location:** `CONTRIBUTIONS.md` · **Owner:** Delivery Lead
 
-Record who delivered and reviewed each MTL-XF-028 work package, including domain, governance, engineering, BI and assurance contributions.
+Link actual authored work, reviews, issues/PRs/commits and presentation/handover contributions for every member.
 
-**Acceptance evidence:** Every member links to substantive artefacts and review/presentation evidence; commit count alone is insufficient.
+**Pass evidence:** All responsibilities have owners and evidence; commit count alone is insufficient.
 
-## Required KPI definitions
+## Metric contracts — authoritative definitions
 
-| Metric | Required definition / calculation |
+| Metric | Definition / support condition |
 | --- | --- |
 | Emissions | Published emissions in the workbook's stated unit and gas/CO2e scope. |
 | Sector share | 100 × compatible sector emissions / matching authority total; avoid double counting subsectors. |
 | Change since 2005 | Current minus 2005 emissions, with percentage change only for a valid positive base. |
 | Recent five-year change | 2024 minus 2019 emissions, subject to compatible boundaries and actual availability. |
 | Per-capita emissions — conditional | Emissions / compatible published population where present; state conversion to tonnes per person. |
-| Locally influenceable share — conditional | 100 × within-influence emissions / compatible territorial emissions where both definitions are supported. |
+| Locally influenceable share — conditional | Compute only with a compatible gas, boundary and unit basis; do not divide CO2-only influence estimates by total-GHG territorial emissions and call it a like-for-like share. |
 | Reduction contribution | Sector absolute reduction / total authority reduction, with sign and near-zero-total caveats. |
 | Coverage | Valid comparable LA/sector/year cells / expected selected cohort cells. |
 
-For every metric record business purpose, formula, source fields, grain, unit, numerator/denominator, exclusions, suppression, zero-base behaviour, owner, refresh and test evidence. Do not populate conditional metrics from invented fields.
+For each metric add source ID and actual raw fields, business purpose, formula, grain, valid population, unit, numerator/denominator, hierarchy, suppression/zero/missing handling, owner, refresh and test evidence. Verify source rounding before setting a reconciliation tolerance. A conditional item is not silently promoted into core; a core requirement is not silently waived.
 
-## Mandatory domain scenarios
+## Project-specific outcomes
 
-1. Reconcile five LA/year/sector figures and one authority total bridge.
-2. Verify tonnes versus kilotonnes conversion with a worked example.
-3. Test nonpositive baselines and a boundary-change exclusion.
-4. Show shortlist sensitivity to two weight sets and distinguish territorial from influenceable scope.
+1. Every carbon result identifies gas/CO2e scope, mass unit, inventory version and geography.
+2. Every priority case has a separate local-influence justification and cost/feasibility evidence request.
+3. Both weight sets disclose component values and changes in shortlisted cases.
 
-## Review gates
-
-Week 2: cohort and source approval. Week 4: model, DQ and metrics approval. Week 6: analytical and decision-framework review. Week 8: UAT, independent rerun and final panel review. Record reviewer, date, artefact version and decision at every gate.
+See [DT1–DT10 and investigation rules](ACCEPTANCE_CRITERIA.md) for worked pass/fail cases. Source schemas, specific period selections and reference versions must be signed at G1. Keep calculation definitions here; other guidance pages link to this contract rather than maintaining competing copies.

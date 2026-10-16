@@ -1,66 +1,68 @@
 # MTL-XF-028 — Project brief
 
-## Engagement
+This is a **simulated confidential-client engagement using official public/open data**. Client and stakeholder role labels describe a fictional engagement; do not claim a real external Mettelo customer, employment, endorsement or privileged data access. No raw data is uploaded by this specification update.
 
-This is a **simulated confidential-client engagement** using official public/open data. The client label is fictional and intentionally anonymous. Do not imply a real external Mettelo customer, employment by that client, privileged access or confidential source data. Public source statistics remain public; the engagement framing does not make them confidential.
+**Client:** Confidential Combined Authority Net Zero & Programme Investment Board. **Decision owner:** Director of Net Zero & Climate Programme Investment. **Team:** 6–8. **Duration:** 8 weeks. **Review:** annual emissions baseline review and quarterly programme-prioritisation meeting.
 
-**Simulated sponsor:** Confidential Combined Authority Net Zero & Programme Investment Board. **Duration:** 8 weeks. **Team:** 6–8 members. **Track:** Cross-Functional. **Sector:** Climate / Local Government / Sustainability.
+## Business problem and commission
 
-## Commission
+The combined authority must choose which sector/place opportunities deserve feasibility work, but the largest territorial emission source may lie outside its direct influence. Changes caused by national electricity supply or industrial activity can also dominate a local trend without demonstrating local policy success. A defensible investment discussion needs a consistent inventory and a separate assessment of delivery influence.
 
-Which local-authority and sector combinations warrant decarbonisation programme investigation based on emissions scale, trend and realistic local influence?
+> Which local-authority and sector combinations warrant decarbonisation programme investigation based on emissions scale, trend and realistic local influence?
 
-**Local Net Zero Emissions, Sector Decarbonisation & Intervention Prioritisation Intelligence.** A combined authority needs to know which sectors and local authorities contribute most to emissions, where emissions are declining slowly, and where local policy intervention may have the strongest case.
+## Core deliverable boundary
 
-## Outcomes and boundaries
+Agreed DESNZ workbook, 2005–2024. Default screening covers English LA/sector records; recent comparison uses 2019–2024, with 2005 as the long-run reference where a valid positive baseline exists. Use a single inventory revision and boundary basis. Territorial total greenhouse gases remain separate from any narrower local-influence measure. Present at most ten shortlisted LA/sector cases for feasibility investigation.
 
-- Build territorial emissions trend and sector contribution bridges, reconciling totals at declared hierarchy.
-- Compare 2005 baseline and recent five-year patterns; isolate boundary changes and negative/net emission categories.
-- Prioritise up to ten LA/sector investigation cases using burden, trend and a documented local-influence assessment; test at least two weight sets.
+**Optional / out of core:** Cost per tonne, investment returns, consumption-based emissions, future target delivery and causal local-policy attribution need additional evidence. Confirm the gas scope of within-influence tables before comparing with total GHG; do not assume they share coverage.
 
-Deliver evidence for a management investigation decision, with an auditable shortlist of up to ten cases and at least two alternative prioritisation scenarios. Do not manufacture a full shortlist where the data supports fewer cases. Findings may conclude that evidence is insufficient.
+File availability does not prove dimensional support. Before analytical build, the team completes the source→field→metric→deliverable matrix in [data guidance](../data/README.md). Missing mandatory support blocks the gate and requires an approved official replacement or scope decision.
 
-**Data boundary:** Freeze the agreed DESNZ 2005–2024 local-authority greenhouse-gas XLSX, approximately 24.9 MB in the prior agreement. Use this workbook rather than the 82.6 MB CSV. Record sheets, units, gases, revisions and territorial/within-influence definitions from actual metadata. Default analysis covers English local authorities; retain other UK areas separately for context.
+## Analytical model
 
-**Model boundary:** Year × local-authority code × sector/subsector × gas/CO2e basis × territorial or within-influence scope. Keep source totals and subsector details at separate hierarchy levels.
+Year × local-authority code × sector/subsector × gas/CO2e basis × territorial or within-influence scope. Keep source totals and subsector details at separate hierarchy levels.
 
-**Out of scope:** real operational deployment, confidential case-level data, guaranteed savings/outcome improvements, paid-source dependencies and automatic allocation of services or funding. Optional modelling or enriched sources must not delay or replace the core D1–D12 pack.
+The source contract above controls where a general grain description is conditional. Do not create dimensions absent from the approved input.
 
-## Users and acceptance owners
+## Objectives
 
-- Simulated sponsor/review panel: approves commissioned question, changes and final investigation recommendation.
-- Domain service/planning user: checks whether diagnostic evidence supports the proposed review action.
-- Data steward: verifies source/version, licence, definitions, quality and retention evidence.
-- BI user: tests overview, drill-down, filters and limitations.
-- Independent reviewer: verifies calculations, rerun and requirement-to-test traceability.
+1. Every carbon result identifies gas/CO2e scope, mass unit, inventory version and geography.
+2. Every priority case has a separate local-influence justification and cost/feasibility evidence request.
+3. Both weight sets disclose component values and changes in shortlisted cases.
 
-These are simulated stakeholder roles, not claims of access to a real organisation.
+## Business questions
 
-## Work allocation
+1. Which LA/sector combinations account for the greatest emissions burden?
+2. Where are comparable emissions falling slowly or increasing?
+3. How does the picture change between territorial and locally influenceable scopes?
+4. Are changes driven by sector mix or shifts within sectors?
+5. Which additional cost, feasibility and delivery evidence is required for programme investment?
 
-| Accountable role | Project responsibility and evidence |
+## Cross-functional delivery model
+
+| Delivery role | Required project contribution |
 | --- | --- |
-| Business Analyst / Delivery Lead | Own the commissioned decision for Confidential Combined Authority Net Zero & Programme Investment Board; record at least eight prioritised requirements, each linked to a deliverable and test; maintain weekly scope and decision logs. |
-| Data Governance Analyst | Register every 028 input and critical field; approve the frozen cohort, licence evidence, glossary and 100% headline-KPI lineage before analysis. |
-| Data Engineer | Implement the stated 028 analytical grain, ingestion and exclusions; deliver a clean rerun with row-count/checksum evidence and no unexplained key duplicates. |
-| BI Developer | Build executive, diagnostic and quality views for the commissioned decision; reconcile at least five 028 dashboard measures and test every visible filter. |
+| Business Analyst / Delivery Lead | Map the annual emissions baseline review and quarterly programme-prioritisation meeting, document eight prioritised user requirements and maintain requirement→deliverable→test links; Director of Net Zero & Climate Programme Investment owns business approval. |
+| Data Governance Analyst | Own the MTL-XF-028 source/metadata register, cohort decision, licence evidence and 100% headline-measure lineage; resolve the specific risk: Local influence, inventory revisions and gas/unit differences can create misleading decarbonisation priorities. |
+| Data Engineer | Implement the declared facts, keys, hierarchy and join controls; account for every source row and deliver a second-member reproducible run at the chosen MTL-XF-028 scope. |
+| BI Developer | Implement the annual emissions baseline review and quarterly programme-prioritisation meeting overview, diagnostic and quality pages; reconcile five measures and ensure cohort/extension warnings survive filters and export. |
 | Sustainability & Emissions Analyst | Validate gas/unit/scope definitions, five source reconciliations and sector bridges. |
 | Net Zero Programme Analyst | Own local-influence assumptions and attach cost/feasibility evidence gaps to each shortlisted case. |
 | Climate Decision Assurance Analyst | Review two prioritisation weight sets, boundary treatment and causal-claim limitations. |
 
-At kickoff, replace role ownership with named team members and record review partners in `CONTRIBUTIONS.md`. Multiple roles per member are permitted, but critical calculations need a reviewer distinct from their author.
+Assign named team members and review partners at kickoff; roles may be combined, but a distinct member must review critical calculations and perform the final clean rerun. The executive and operational stakeholder roles are specified in [business context](BUSINESS_CONTEXT.md).
 
-## Working stages
+## Required investigation approach
 
-1. Week 1: agree at least eight requirements and define expected decisions.
-2. Week 2: inspect actual file schemas, establish available coverage and approve cohort freeze.
-3. Week 3: implement and reconcile analytical facts, keys and exclusions.
-4. Week 4: approve the 8-measure KPI catalogue and denominator rules.
-5. Week 5: complete five supported findings and domain comparisons.
-6. Week 6: compare two decision scenarios, produce the investigation shortlist and BI draft.
-7. Week 7: execute ten or more assurance/UAT scenarios, including project-specific edge cases.
-8. Week 8: independent rerun, executive briefing, presentation and final handover.
+Provide transparent component ranks for current burden, recent reduction trend and documented local influence. Compare a burden-led weight set (60/20/20) with a more balanced set (40/30/30). Define component direction, eligibility and missingness before applying weights; do not score a missing influence assessment as zero. Weights are simulated planning assumptions.
 
-## Sign-off
+## Milestones and acceptance
 
-Follow [D1–D12](DELIVERABLES.md) and [AC1–AC12](ACCEPTANCE_CRITERIA.md). Approve only with reproducible evidence, no unresolved critical/high defects and transparent conditional-data limitations. A change in source availability must be logged; do not silently substitute a newer release.
+| Gate | Reviewers | Evidence / decision |
+| --- | --- | --- |
+| G1 — scope/source, end Week 2 | Business Analyst + Data Governance Analyst + domain specialist | Approve actual period, geography, grain, required input and field support in a source-to-deliverable matrix. Workbook listing, revision/boundary context and scope distinction verified; sheet-level mappings, precise gas/unit compatibility and frozen checksums pending. Unsupported mandatory outputs remain blocked, not quietly reclassified as completed. |
+| G2 — model/metrics, end Week 4 | Data Engineer + domain specialist + independent reviewer | Approve row accounting, keys, hierarchy, join cardinality, five source reconciliations and all core metric definitions. |
+| G3 — analytical decision review, end Week 6 | Director of Net Zero & Climate Programme Investment + operational stakeholders | Provide transparent component ranks for current burden, recent reduction trend and documented local influence. Compare a burden-led weight set (60/20/20) with a more balanced set (40/30/30). Define component direction, eligibility and missingness before applying weights; do not score a missing influence assessment as zero. Weights are simulated planning assumptions. Retain an evidence-insufficient case and a manual review route. |
+| G4 — release, end Week 8 | Simulated Mettelo panel + independent reviewer | Accept D1–D12 only after ten executed domain tests, five BI reconciliations, clean rerun evidence and resolution of all critical/high defects. |
+
+D1–D12 are defined in [deliverables](DELIVERABLES.md). AC1–AC12 and DT1–DT10 are defined in [acceptance criteria](ACCEPTANCE_CRITERIA.md). No real production deployment, automatic funding/service allocation, private-client data or paid-source dependency is required.

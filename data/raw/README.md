@@ -1,11 +1,11 @@
-# MTL-XF-028 — Raw source snapshots
+# MTL-XF-028 — Raw input guidance
 
-**State:** no raw data uploaded by this build.
+**Current state:** no raw data uploaded by this specification revision.
 
-Freeze the agreed DESNZ 2005–2024 local-authority greenhouse-gas XLSX, approximately 24.9 MB in the prior agreement. Use this workbook rather than the 82.6 MB CSV. Record sheets, units, gases, revisions and territorial/within-influence definitions from actual metadata. Default analysis covers English local authorities; retain other UK areas separately for context.
+Use only the files activated under [SOURCE_REGISTER.md](../SOURCE_REGISTER.md) and the approved [core contract](../README.md). Original bytes belong here only after later acquisition/upload authorisation and verified redistribution conditions. Keep cleaned extracts, corrections and dashboard outputs elsewhere.
 
-The exact agreed inputs are listed in [the source register](../SOURCE_REGISTER.md). This folder is reserved for original publisher bytes only after controlled acquisition and permission under verified reuse terms. Never place cleaned extracts, manually corrected files or dashboard exports here.
+For each input retain original filename, source ID, resolved URL, retrieval UTC, actual release, byte count and SHA-256. Preserve archive members/sheets and versioned paths; never overwrite an approved snapshot. A fallback replaces the specified input under its documented activation rule; overlapping snapshots must not be double counted.
 
-For every approved snapshot, retain source ID, original/resolved URL, retrieval UTC, publisher version, original filename, byte size and SHA-256 in metadata. Preserve archived member names and sheet structure. Use versioned paths rather than overwriting a snapshot. Validate expected file type and schema before ingestion; retain failures in an acquisition log.
+Data Engineer verifies identity on rerun; Data Governance Analyst and domain specialist approve freeze. If file redistribution is restricted, retain authorised access instructions, manifest and metadata instead of prohibited bytes.
 
-The Data Governance Analyst controls freeze approval; the Data Engineer verifies checksums on each run. If redistribution is restricted, preserve the manifest and authorised retrieval instructions in the approved location rather than uploading prohibited bytes. Do not add data merely to make the repository look populated.
+**Project-specific hazard:** Local influence, inventory revisions and gas/unit differences can create misleading decarbonisation priorities.

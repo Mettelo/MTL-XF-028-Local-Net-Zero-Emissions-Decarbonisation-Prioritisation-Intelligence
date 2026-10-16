@@ -1,46 +1,55 @@
-# MTL-XF-028 — Source register
+# MTL-XF-028 — Source register and verification record
 
 **Project:** Local Net Zero Emissions, Sector Decarbonisation & Intervention Prioritisation Intelligence  
-**Register date:** 16 October 2026  
-**Status:** agreed source references recovered; acquisition, payload verification and freeze approval pending.
+**Documentation review:** 16 October 2026  
+**State:** official documentation checked; acquired-file validation and freeze approval pending.  
+**Steward:** Data Governance Analyst, with the project domain specialist.
 
-## Cohort contract
+## Source/cohort decision
 
-Freeze the agreed DESNZ 2005–2024 local-authority greenhouse-gas XLSX, approximately 24.9 MB in the prior agreement. Use this workbook rather than the 82.6 MB CSV. Record sheets, units, gases, revisions and territorial/within-influence definitions from actual metadata. Default analysis covers English local authorities; retain other UK areas separately for context.
+Agreed DESNZ workbook, 2005–2024. Default screening covers English LA/sector records; recent comparison uses 2019–2024, with 2005 as the long-run reference where a valid positive baseline exists. Use a single inventory revision and boundary basis. Territorial total greenhouse gases remain separate from any narrower local-influence measure. Present at most ten shortlisted LA/sector cases for feasibility investigation.
 
-## Source entries
+**Outside core:** Cost per tonne, investment returns, consumption-based emissions, future target delivery and causal local-policy attribution need additional evidence. Confirm the gas scope of within-influence tables before comparing with total GHG; do not assume they share coverage.
 
-### S1 — 2005-24-uk-local-authority-ghg-emissions.xlsx
+## Official publication and methodology references
 
-Exact agreed download URL (copy verbatim):
+| Official reference | URL |
+| --- | --- |
+| Official workbook and technical-report directory | https://www.gov.uk/government/statistics/uk-local-authority-and-regional-greenhouse-gas-emissions-statistics-2005-to-2024 |
+| Statistical release | https://www.gov.uk/government/statistics/uk-local-authority-and-regional-greenhouse-gas-emissions-statistics-2005-to-2024/2005-to-2024-uk-local-and-regional-greenhouse-gas-emissions-statistical-release-web-accessible |
+
+References above were inspected for this revision. They establish only the evidence described below; they are not a completed file acquisition, licence clearance or signed freeze.
+
+## Verification findings
+
+DESNZ lists the agreed 24.9 MB Excel workbook and a technical report. The release describes a revised historical inventory on a consistent boundary basis and total greenhouse-gas estimates in CO2e; its local-influence discussion refers to CO2. This distinction requires a gas-scope check before any influenceable-share calculation. The workbook's actual sheets and units still need file-level validation.
+
+**Field/reference mapping and acquisition instructions:** Locate the workbook tables for LA identifiers, sector/subsector, year, territorial greenhouse gases, population and any within-influence series. Record exact sheet/column names at acquisition. Do not invent table numbers or treat every tab as one additive fact.
+
+**Remaining status:** Workbook listing, revision/boundary context and scope distinction verified; sheet-level mappings, precise gas/unit compatibility and frozen checksums pending.
+
+## Exact copyable file URLs
+
+Original agreed URLs are retained. Entries labelled required supplement/reference or fallback are explicit changes from the initial pack. Do not silently replace an input with a newer release.
+
+### S1 — Agreed core input 1
 
 ```text
 https://assets.publishing.service.gov.uk/media/6a3bacc7eaee00074150f326/2005-24-uk-local-authority-ghg-emissions.xlsx
 ```
 
-- Publisher/source: DESNZ local/regional greenhouse-gas data tables, 2005–2024. The Excel workbook is 24.9 MB and is preferable to the 82.6 MB raw CSV for Mettelo.
-- Intended role: required core input.
-- Access expectation from agreement: £0, public download, no paid API required.
-- Verification state: URL recovered from the final agreed conversation; browser-only retrieval on 16 October 2026 could not validate the file contents. This is not a completed download/schema/licence check.
-- File acquisition state: **not downloaded or uploaded in this master-pack build**.
-- Actual release/coverage, retrieval UTC, resolved URL, filename, bytes, SHA-256, sheet/archive members, row counts and schema: **pending controlled acquisition**.
-- Licence and redistribution evidence: **pending inspection of the official publication and file notices**. Public accessibility alone does not establish reuse rights.
-- Required before analysis: metadata and coverage validation; freeze approval by Data Governance Analyst and domain analyst.
+**Acquisition:** pending; no source bytes uploaded. Record actual version, coverage, schema and licence before approving use. Core source reference; actual file identity remains to be verified.
 
-## Acquisition manifest requirements
+## File validation and licence record
 
-Create one row per acquired file, including archive members and all eight months where applicable:
+For every actually used input record:
 
-`source_id, original_url, resolved_url, retrieved_utc, publisher_release, filename, bytes, sha256, format, sheets_or_members, row_count, coverage_start, coverage_end, geography, schema_version, licence_evidence_path, approved_by, approval_date`
+`source_id, role_core_reference_fallback_extension, original_url, resolved_url, retrieved_utc, actual_release, filename, bytes, sha256, format, sheets_or_members, rows, geography, period_start, period_end, grain, schema_version, methodology_evidence, licence_notice, attribution, redistribution_conditions, approved_by, approval_date`
 
-Never enter guessed values. A missing field remains pending with an owner and reason. Source IDs above are local to this project. Preserve the actual publisher metadata and notices alongside the manifest.
+Retain the relevant publication/file notices, including exceptions and third-party conditions. Do not assume all publishers use the same licence. A stated publication licence does not remove the need to check file-specific terms. Keep unverified values pending; never invent a hash or approval.
 
-## Validation and fallback
+## Support and freeze decision
 
-Browser checks during this build could not inspect downloadable payloads consistently; unsupported download formats and retrieval failures do not prove a URL is broken. They also do not verify schema, current availability, advertised history, size or redistribution rights. Perform a controlled file acquisition before team analysis.
+Complete the [source-to-deliverable matrix](README.md). The domain specialist verifies actual grain, units, period comparability and supported metrics; the steward verifies identity and reuse terms. Required missing fields block dependent core outputs. Every activated extension is separately registered. Where a fallback is used, record why, which original it replaces, overlap handling and impact on outputs.
 
-If the exact link fails, locate the same release through the official publisher's publication series, record the replacement URL and compare version/coverage. Escalate any change to cohort, dimensions or reporting window through the project change log. No paid source or live API is required by the agreed design. No guarantee is made that a publisher URL will remain unchanged indefinitely.
-
-## Data sign-off
-
-The Data Governance Analyst and domain analyst sign the actual manifest after checking file identity, licence, coverage and definitions. Ingest only the signed cohort. Every headline metric must trace through transformations back to a registered source and field.
+If an agreed URL fails, seek the same official archived release and record evidence. A browser format limitation does not prove a file is unavailable, and a successful page fetch does not prove payload integrity. Preserve the frozen version and metadata in the approved location so future website changes do not silently alter the cohort.

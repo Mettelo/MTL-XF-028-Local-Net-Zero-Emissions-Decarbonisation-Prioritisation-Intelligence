@@ -1,47 +1,59 @@
-# MTL-XF-028 — Acceptance criteria
+# MTL-XF-028 — Acceptance criteria and domain tests
 
-**Decision to support:** Which local-authority and sector combinations warrant decarbonisation programme investigation based on emissions scale, trend and realistic local influence?
+**Business decision owner:** Director of Net Zero & Climate Programme Investment. **Decision:** Which local-authority and sector combinations warrant decarbonisation programme investigation based on emissions scale, trend and realistic local influence?
 
-These criteria assess delivery quality; they do not certify real operational outcomes. Complete a requirement → deliverable → test → evidence → reviewer matrix in the team repository.
+## Delivery sign-off
 
-| ID | Deliverables | Pass condition | Acceptance owner |
+| ID | Deliverables | Required pass evidence | Acceptance owner |
 | --- | --- | --- | --- |
-| AC1 | D1 | Eight or more prioritised requirements map to a named user, deliverable, acceptance test and reviewer. | Business Analyst / simulated sponsor |
-| AC2 | D2 | 100% of core and extension inputs have exact source URL, actual version/coverage, retrieval timestamp, licence evidence, byte size and SHA-256; mutable endpoints have one approved snapshot. | Data Governance Analyst |
-| AC3 | D3 | A distinct reviewer reruns the same frozen inputs in the documented environment and obtains equivalent curated rows and values; explain any nondeterministic ordering. | Data Engineer / independent reviewer |
-| AC4 | D4 | Every input row is accounted for in retained/excluded/quarantined counts; zero unexplained key duplicates; all join multiplication is quantified. | Data Engineer / domain analyst |
-| AC5 | D4–D5 | At least five source cells across two periods or segments reconcile exactly for counts and within source precision for rounded measures. Each tolerance is declared before testing. | Domain analyst / assurance reviewer |
-| AC6 | D5 | All 8 listed measures have definitions, source lineage and edge-case behaviour; conditional unavailable metrics show an explicit reason, no fabricated value. | Data Governance Analyst / BI Developer |
-| AC7 | D6 | At least five findings state scope, magnitude, comparison and limitation; all five business questions are answered or have an evidenced data gap. | Domain analyst |
-| AC8 | D7 | Up to ten investigation cases have reason codes, supporting metrics, an owner and missing-evidence request; at least two priority scenarios show membership/rank changes and rationale. | Specialist policy/operations role |
-| AC9 | D8 | At least five headline BI values reconcile to curated output; all visible filters, reset behaviour, period labels, units and quality warnings are tested. | BI Developer / UAT reviewer |
-| AC10 | D9 | At least ten scenarios include the four mandatory domain cases, calculation, filtering, missingness and reproducibility; expected/actual results and evidence recorded; zero unresolved critical/high defects. | Assurance reviewer |
-| AC11 | D10–D11 | Independent clean rerun evidence, maximum two-page briefing and 15–20 minute presentation exist; every numerical recommendation links to a tested metric/artefact. | Delivery Lead / review panel |
-| AC12 | D12 | Each member has evidence-linked authored and reviewed work, role ownership and presentation/handover contribution; master/team repository distinction maintained. | Delivery Lead |
+| AC1 | D1 | Eight user requirements cover the commissioned questions, named stakeholder actions and core/extension boundary. | Business Analyst / Director of Net Zero & Climate Programme Investment |
+| AC2 | D2 | 100% of used source files have approved provenance, version/coverage, licence, retrieval UTC and SHA-256. Required fields and reference versions are checked. | Data Governance Analyst |
+| AC3 | D3 | Every input row is accounted for; keys and all many-to-many/hierarchy effects have explicit checks and no unexplained duplication. | Data Engineer / independent reviewer |
+| AC4 | D4 | Five source cells reconcile within a declared rounding tolerance; all material differences and non-additive totals are explained. | Domain specialist |
+| AC5 | D5 | All 8 metric contracts are classified core/conditional and have tested definitions; no unsupported fields or fabricated unavailable values. | Data Governance Analyst / BI Developer |
+| AC6 | D6 | Five findings cover all business questions or evidence gaps; period, eligible population, magnitude, comparison and limitation are visible. | Domain analyst |
+| AC7 | D7 | The project-specific baseline and alternative below are implemented; eligibility, scenario changes, reason codes and evidence requests are visible. | Director of Net Zero & Climate Programme Investment |
+| AC8 | D8 | Five BI measures reconcile to curated outputs; all filters/reset/export retain the scope, units and limitations. | BI Developer / operational UAT user |
+| AC9 | D9 | DT1–DT10 have actual execution evidence and expected/actual outcomes; no unresolved critical/high defect. | Independent reviewer |
+| AC10 | D10 | A distinct member's clean rerun reproduces equivalent core outputs with documented environment and checks. | Independent rerun reviewer |
+| AC11 | D11 | Two-page maximum briefing and 15–20 minute presentation answer the decision and assign investigation owners without unsupported outcomes. | Director of Net Zero & Climate Programme Investment / Mettelo panel |
+| AC12 | D12 | Every member links substantive authored and reviewed work, including handover or presentation contribution. | Delivery Lead |
 
-## Required domain acceptance cases
+## Project-specific business success
 
-1. Reconcile five LA/year/sector figures and one authority total bridge.
-2. Verify tonnes versus kilotonnes conversion with a worked example.
-3. Test nonpositive baselines and a boundary-change exclusion.
-4. Show shortlist sensitivity to two weight sets and distinguish territorial from influenceable scope.
+1. Every carbon result identifies gas/CO2e scope, mass unit, inventory version and geography.
+2. Every priority case has a separate local-influence justification and cost/feasibility evidence request.
+3. Both weight sets disclose component values and changes in shortlisted cases.
 
-Each case needs test input/reference, expected result, actual result, pass/fail, evidence path, tester, reviewer and execution date. Add cases until there are at least ten; do not count a written assertion as an executed test.
+## Required prioritisation and sensitivity
 
-## Specific analytical sign-off
+Provide transparent component ranks for current burden, recent reduction trend and documented local influence. Compare a burden-led weight set (60/20/20) with a more balanced set (40/30/30). Define component direction, eligibility and missingness before applying weights; do not score a missing influence assessment as zero. Weights are simulated planning assumptions.
 
-- Build territorial emissions trend and sector contribution bridges, reconciling totals at declared hierarchy.
-- Compare 2005 baseline and recent five-year patterns; isolate boundary changes and negative/net emission categories.
-- Prioritise up to ten LA/sector investigation cases using burden, trend and a documented local-influence assessment; test at least two weight sets.
+Record each case's entity/segment, valid period, supporting measures, reason code, scenario position, missing evidence, responsible operational role, next review and manual-review trigger. Fewer than ten cases is valid; padding unsupported cases fails acceptance.
 
-Reviewers must verify the declared cohort and grain:
+## DT1–DT10 — minimum executed domain tests
 
-Freeze the agreed DESNZ 2005–2024 local-authority greenhouse-gas XLSX, approximately 24.9 MB in the prior agreement. Use this workbook rather than the 82.6 MB CSV. Record sheets, units, gases, revisions and territorial/within-influence definitions from actual metadata. Default analysis covers English local authorities; retain other UK areas separately for context.
+| Test | Input / action | Expected pass evidence |
+| --- | --- | --- |
+| DT1 | Reconcile five LA/year/sector figures and one authority total bridge. | Five selected published values reproduce within declared source precision, with explicit source coordinates and scope. |
+| DT2 | Verify tonnes versus kilotonnes conversion with a worked example. | The invalid comparison, join or denominator is rejected or flagged according to the documented rule; no silent fallback. |
+| DT3 | Test nonpositive baselines and a boundary-change exclusion. | The edge case produces an explicit unavailable/exclusion result or a supported calculation, with affected rows quantified. |
+| DT4 | Show shortlist sensitivity to two weight sets and distinguish territorial from influenceable scope. | The domain boundary remains visible in the analytical output and BI product; no unsupported inference. |
+| DT5 | 1 kilotonne CO2e is converted for a per-person measure | Equals 1,000 tonnes CO2e; denominator and resulting unit remain explicit. |
+| DT6 | A total-GHG territorial value is compared with a CO2-only influence table | Do not report the ratio as a like-for-like influenceable GHG share. |
+| DT7 | Baseline emissions are negative or zero | Percentage reduction is unavailable; retain absolute change with explanation. |
+| DT8 | Data from two inventory revisions is mixed | Reject or reconcile the mixture before calculating trends. |
+| DT9 | Weights change from 60/20/20 to 40/30/30 | Scores and shortlist membership are recomputed with unchanged eligibility. |
+| DT10 | Local influence is unknown | Mark evidence missing and hold the case for review rather than assign a fabricated score. |
 
-Year × local-authority code × sector/subsector × gas/CO2e basis × territorial or within-influence scope. Keep source totals and subsector details at separate hierarchy levels.
+Worked values are **synthetic test fixtures**, not claims about the public data or simulated client. For each test retain requirement ID, source/input or fixture, expected result, actual result, evidence link, tester, independent reviewer and date. DT1–DT4 additionally require the documented project-specific rule; their general evidence descriptions do not waive the named domain condition. Add dashboard/filter tests as needed beyond these ten.
 
-## Failed or unavailable evidence
+## Scope gate and unresolved issues
 
-A conditional metric may be marked unavailable when the source lacks its dimensions, with a documented alternative or evidence request. This does not waive the core model, dashboard or assurance. A change to a mandatory requirement needs a change log entry with impact and simulated-panel approval. Missing sources mean the data freeze remains pending; do not mark a source gate passed.
+**Mandatory core:** Agreed DESNZ workbook, 2005–2024. Default screening covers English LA/sector records; recent comparison uses 2019–2024, with 2005 as the long-run reference where a valid positive baseline exists. Use a single inventory revision and boundary basis. Territorial total greenhouse gases remain separate from any narrower local-influence measure. Present at most ten shortlisted LA/sector cases for feasibility investigation.
 
-Critical/high means a defect materially changes a headline value, cohort, recommendation, provenance or reproducibility. Such defects block final acceptance. Lower-severity limitations need named acceptance and disclosed effect. No stakeholder approval may be invented; record simulated UAT as simulated.
+**Optional extensions:** Cost per tonne, investment returns, consumption-based emissions, future target delivery and causal local-policy attribution need additional evidence. Confirm the gas scope of within-influence tables before comparing with total GHG; do not assume they share coverage.
+
+A mandatory source/field gap blocks the affected deliverable and must be resolved by a registered official replacement or approved, versioned scope change. An explicitly optional result may be unavailable with a reason and a useful evidence request. Neither missing raw data nor unexecuted tests may be marked passed.
+
+A critical/high defect materially changes a headline value, cohort, recommendation, provenance or reproducibility and blocks release. Lower-impact issues require a named acceptance owner and disclosed impact. All panel feedback and approvals must be recorded honestly as simulated where applicable.

@@ -1,33 +1,18 @@
-# MTL-XF-028 — Metadata, lineage and freeze evidence
+# MTL-XF-028 — Metadata and evidence
 
-Metadata makes local net zero emissions, sector decarbonisation & intervention prioritisation intelligence reproducible. This folder currently contains guidance; no acquisition manifest or source sign-off is claimed.
+Maintain actual evidence for the [source register](../SOURCE_REGISTER.md), [metric contracts](../../project/DELIVERABLES.md) and [acceptance tests](../../project/ACCEPTANCE_CRITERIA.md). This guidance is not a completed manifest or source approval.
 
-## Required records after acquisition
+Required records:
 
-- Source manifest: source ID, exact/resolved URL, retrieval UTC, actual release, filename, bytes, SHA-256, archive members/sheets and coverage.
-- Publisher methodology and licence/attribution evidence with provenance and retrieval date.
-- Schema and field dictionary: name, type, meaning, units, key role, missing/suppression markers and valid values.
-- Business glossary and critical data elements, with named steward and approved definitions.
-- Grain, hierarchy and join-cardinality documentation.
-- Field-level lineage from raw fields through transformations to each headline metric/dashboard measure.
-- Quality profile, row-accounting reconciliation, exclusions, unresolved exceptions and their decision impact.
-- Freeze approval, change log and later revision comparisons.
+- Manifest with source role, original/resolved URL, per-file retrieval UTC, release/coverage, filename, bytes, SHA-256, format and members/sheets.
+- Publisher methodology, file notices, licence/attribution/redistribution evidence and version alignment.
+- Field dictionary with actual raw names/types, business meaning, units, keys, valid categories, suppression and missing markers.
+- Source-to-deliverable matrix with actual field support and decisions on core, fallback and optional work.
+- Grain/hierarchy/cardinality contracts and versioned reference mappings.
+- Field-level lineage to every headline KPI and BI measure, referring to the authoritative formula once.
+- Row accounting, quality profiles, reconciliation coordinates/tolerances and all exclusions/quarantine decisions.
+- Freeze sign-off, change log and impact comparison for later revisions.
 
-## Model contract
+**Current verification boundary:** Workbook listing, revision/boundary context and scope distinction verified; sheet-level mappings, precise gas/unit compatibility and frozen checksums pending.
 
-Year × local-authority code × sector/subsector × gas/CO2e basis × territorial or within-influence scope. Keep source totals and subsector details at separate hierarchy levels.
-
-## Metric definition coverage
-
-- Emissions: Published emissions in the workbook's stated unit and gas/CO2e scope.
-- Sector share: 100 × compatible sector emissions / matching authority total; avoid double counting subsectors.
-- Change since 2005: Current minus 2005 emissions, with percentage change only for a valid positive base.
-- Recent five-year change: 2024 minus 2019 emissions, subject to compatible boundaries and actual availability.
-- Per-capita emissions — conditional: Emissions / compatible published population where present; state conversion to tonnes per person.
-- Locally influenceable share — conditional: 100 × within-influence emissions / compatible territorial emissions where both definitions are supported.
-- Reduction contribution: Sector absolute reduction / total authority reduction, with sign and near-zero-total caveats.
-- Coverage: Valid comparable LA/sector/year cells / expected selected cohort cells.
-
-Every listed metric needs source fields, transformation/formula, valid grain, unit, numerator/denominator, exclusions, zero/missing behaviour, refresh expectation, owner and test reference. Mark conditional metrics unavailable if the actual source cannot support them.
-
-Store actual evidence only; never invent publisher schema, a completed licence review, a checksum or a stakeholder approval. See [source register](../SOURCE_REGISTER.md) and [acceptance criteria](../../project/ACCEPTANCE_CRITERIA.md).
+Never manufacture a schema, checksum, licence clearance, retrieval record or stakeholder approval. Unsupported core requirements remain blocked until an evidence-based resolution is approved.
