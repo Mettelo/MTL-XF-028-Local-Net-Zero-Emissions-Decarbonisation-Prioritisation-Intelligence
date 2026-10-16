@@ -4,7 +4,7 @@
 **Client:** Confidential Combined Authority Net Zero & Programme Investment Board  
 **Accountable simulated executive:** Director of Net Zero & Climate Programme Investment  
 **Sector:** Climate / Local Government / Sustainability  
-**Team:** 6–8 people · **Window:** 8 weeks  
+**Team:** 3–5 people · **Window:** 8 weeks  
 **Status:** documentation revised; file acquisition and cohort freeze pending  
 **Review cadence:** annual emissions baseline review and quarterly programme-prioritisation meeting
 
