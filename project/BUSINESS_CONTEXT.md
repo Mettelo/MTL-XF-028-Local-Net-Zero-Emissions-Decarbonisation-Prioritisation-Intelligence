@@ -6,15 +6,19 @@
 
 This fictional directorate/board is an engagement scenario, not an assertion of a real client's circumstances. The source data remains official public/open data.
 
+## Business setting and immediate planning need
+
+The simulated combined-authority net-zero board allocates feasibility and programme-development attention across places and sectors. Its quarterly prioritisation meeting must decide which decarbonisation opportunities deserve further work before any investment proposal is considered.
+
 ## Business problem
 
-The combined authority must choose which sector/place opportunities deserve feasibility work, but the largest territorial emission source may lie outside its direct influence. Changes caused by national electricity supply or industrial activity can also dominate a local trend without demonstrating local policy success. A defensible investment discussion needs a consistent inventory and a separate assessment of delivery influence.
+The Director of Net Zero & Climate Programme Investment needs to move from an emissions inventory to a practical feasibility agenda. A large territorial source may offer little direct local influence, while an area with a smaller but persistent transport or building-related signal may present a more actionable question. Historical reductions can also reflect national electricity changes or industrial activity rather than local programme delivery.
+
+A simple carbon ranking therefore cannot explain where the authority should spend its next tranche of feasibility effort. The commission is a transparent LA/sector opportunity screen combining emissions scale and trend with a separately evidenced local-influence assessment, so programme managers can commission the right cost, delivery and partner enquiries.
 
 ## Why the current process is insufficient
 
-The current scenario relies on separately prepared reports without a common source/metric contract. The material failure to prevent is specific: Local influence, inventory revisions and gas/unit differences can create misleading decarbonisation priorities.
-
-This creates uncertainty over which cases need investigation and which comparisons should be rejected. No quantified loss, backlog, budget deficit or service failure is invented as a client fact.
+Inventory reporting answers where emissions are recorded; programme selection asks what the authority can plausibly influence. The existing scenario does not join those discussions through a documented decision record. The replacement must keep total territorial GHG separate from narrower influence measures and show how alternative priorities change the shortlist.
 
 ## Stakeholders and decisions
 
@@ -32,15 +36,15 @@ Which local-authority and sector combinations warrant decarbonisation programme 
 
 ## Practical management use case
 
-The Director compares a high-emissions LA/transport combination with an area whose emissions are falling slowly. The team opens the sector bridge, checks whether the change is structural, and records whether local programme levers are plausible. The shortlist commissions feasibility and cost work; it does not approve investment solely from a carbon ranking.
+At the quarterly programme meeting, the Director compares a high-emissions LA/sector case with another showing a slower recent reduction. The analyst explains the sector-change bridge and inventory/boundary basis; the Transport & Housing Decarbonisation Leads then record a source-backed or explicitly assumed local-influence judgement separately from the measured emissions.
+
+The board tests both declared weight sets before commissioning a feasibility enquiry. Each selected case names a programme owner and requests intervention cost, delivery partners, timing and additionality evidence. The inventory supports selection for further work; it does not establish cost per tonne, investment return or that a local policy caused a historical reduction.
 
 ## Current-to-target workflow
 
-1. **Before review:** analyst registers the approved files, coverage and definitions; steward checks the cohort and unresolved exceptions.
-2. **At review:** Director of Net Zero & Climate Programme Investment opens the overview, then inspects diagnostics and the underlying eligible population before considering a case.
-3. **Challenge:** the relevant stakeholder compares the alternative scenario and asks whether the signal survives missingness, comparability and denominator checks.
-4. **Action:** each accepted case records investigation type, responsible service role, missing evidence, next review and what finding would reverse the recommendation.
-5. **Follow-up:** the next annual emissions baseline review and quarterly programme-prioritisation meeting records evidence received and the decision, without claiming the analytical signal itself caused an improvement.
+**Target management handover:** A net-zero feasibility screening pack with reconciled sector-change bridges, a distinct local-influence assessment, two weighting scenarios and a programme enquiry register specifying the evidence required before an investment case.
+
+The meeting's decision record must contain: the selected case and reporting period; the source-backed finding; the decision to investigate, watch, clarify or close; the responsible stakeholder role; the specific additional evidence requested; and the next review point. Add the evidence that would reverse or narrow the recommendation. A watchlist or no-action conclusion is valid when supported; do not fill the shortlist simply to reach ten cases.
 
 ## Required analytical response
 
@@ -56,7 +60,9 @@ The Director compares a high-emissions LA/transport combination with an area who
 
 ## Proposed benefit monitoring
 
-At kickoff, record a baseline review process and propose measures for: time to regenerate the agreed evidence pack; proportion of agenda recommendations with a complete evidence chain; and proportion of accepted investigations with a role owner and next review. The target for recommendation traceability and ownership is 100%; regeneration time is measured during the independent rerun, with no fabricated pre-project baseline or claimed reduction. These are proposed management measures, not achieved service benefits.
+Measure whether every selected LA/sector case separates measured emissions from the local-influence judgement and names a feasibility owner; target 100%. Show membership changes under both weight sets. Carbon savings, cost effectiveness and realised investment returns need project-specific evidence after this screening stage.
+
+Record the preparation and review baseline at kickoff, then measure evidence-pack regeneration during the independent rerun. No pre-project time saving or achieved operational benefit is assumed. The eight-week engagement is assessed on the usability and traceability of the decision pack; later service outcomes require separate follow-up.
 
 ## Scope and evidence limits
 

@@ -6,9 +6,17 @@ This is a **simulated confidential-client engagement using official public/open 
 
 ## Business problem and commission
 
-The combined authority must choose which sector/place opportunities deserve feasibility work, but the largest territorial emission source may lie outside its direct influence. Changes caused by national electricity supply or industrial activity can also dominate a local trend without demonstrating local policy success. A defensible investment discussion needs a consistent inventory and a separate assessment of delivery influence.
+The simulated combined-authority net-zero board allocates feasibility and programme-development attention across places and sectors. Its quarterly prioritisation meeting must decide which decarbonisation opportunities deserve further work before any investment proposal is considered.
+
+The Director of Net Zero & Climate Programme Investment needs to move from an emissions inventory to a practical feasibility agenda. A large territorial source may offer little direct local influence, while an area with a smaller but persistent transport or building-related signal may present a more actionable question. Historical reductions can also reflect national electricity changes or industrial activity rather than local programme delivery.
+
+A simple carbon ranking therefore cannot explain where the authority should spend its next tranche of feasibility effort. The commission is a transparent LA/sector opportunity screen combining emissions scale and trend with a separately evidenced local-influence assessment, so programme managers can commission the right cost, delivery and partner enquiries.
 
 > Which local-authority and sector combinations warrant decarbonisation programme investigation based on emissions scale, trend and realistic local influence?
+
+**Required management handover:** A net-zero feasibility screening pack with reconciled sector-change bridges, a distinct local-influence assessment, two weighting scenarios and a programme enquiry register specifying the evidence required before an investment case.
+
+See [the management use case](BUSINESS_CONTEXT.md#practical-management-use-case) for how the review meeting uses this evidence.
 
 ## Core deliverable boundary
 

@@ -10,9 +10,15 @@
 
 > This is a **simulated confidential-client engagement using official public/open data**. Client and stakeholder role labels describe a fictional engagement; do not claim a real external Mettelo customer, employment, endorsement or privileged data access. No raw data is uploaded by this specification update.
 
+## Business setting
+
+The simulated combined-authority net-zero board allocates feasibility and programme-development attention across places and sectors. Its quarterly prioritisation meeting must decide which decarbonisation opportunities deserve further work before any investment proposal is considered.
+
 ## Business problem
 
-The combined authority must choose which sector/place opportunities deserve feasibility work, but the largest territorial emission source may lie outside its direct influence. Changes caused by national electricity supply or industrial activity can also dominate a local trend without demonstrating local policy success. A defensible investment discussion needs a consistent inventory and a separate assessment of delivery influence.
+The Director of Net Zero & Climate Programme Investment needs to move from an emissions inventory to a practical feasibility agenda. A large territorial source may offer little direct local influence, while an area with a smaller but persistent transport or building-related signal may present a more actionable question. Historical reductions can also reflect national electricity changes or industrial activity rather than local programme delivery.
+
+A simple carbon ranking therefore cannot explain where the authority should spend its next tranche of feasibility effort. The commission is a transparent LA/sector opportunity screen combining emissions scale and trend with a separately evidenced local-influence assessment, so programme managers can commission the right cost, delivery and partner enquiries.
 
 ## Commissioned decision
 
@@ -20,9 +26,13 @@ The combined authority must choose which sector/place opportunities deserve feas
 
 ## Practical use
 
-The Director compares a high-emissions LA/transport combination with an area whose emissions are falling slowly. The team opens the sector bridge, checks whether the change is structural, and records whether local programme levers are plausible. The shortlist commissions feasibility and cost work; it does not approve investment solely from a carbon ranking.
+At the quarterly programme meeting, the Director compares a high-emissions LA/sector case with another showing a slower recent reduction. The analyst explains the sector-change bridge and inventory/boundary basis; the Transport & Housing Decarbonisation Leads then record a source-backed or explicitly assumed local-influence judgement separately from the measured emissions.
 
-The full [business context](project/BUSINESS_CONTEXT.md) names operational stakeholders, decisions, risks and proposed benefit measures.
+The board tests both declared weight sets before commissioning a feasibility enquiry. Each selected case names a programme owner and requests intervention cost, delivery partners, timing and additionality evidence. The inventory supports selection for further work; it does not establish cost per tonne, investment return or that a local policy caused a historical reduction.
+
+**Management handover:** A net-zero feasibility screening pack with reconciled sector-change bridges, a distinct local-influence assessment, two weighting scenarios and a programme enquiry register specifying the evidence required before an investment case.
+
+The full [business context](project/BUSINESS_CONTEXT.md) sets out stakeholders, decisions, evidence limits and proposed benefit measures.
 
 ## What must be delivered
 
